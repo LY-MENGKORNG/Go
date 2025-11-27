@@ -4,14 +4,19 @@ import (
 	"fmt"
 )
 
-func DisplayOutputs(function []func()) {
-	for _, f := range function {
-		fmt.Println("------------------")
-		f()
+type ListOutput struct {
+	ModuleName string
+	Function   func()
+}
+
+func DisplayOutputs(outputList []ListOutput) {
+	for _, output := range outputList {
+		fmt.Printf("🌳🌳🌳 %v 🌳🌳🌳 \n", output.ModuleName)
+		output.Function()
 	}
 }
 
-func Outputs(strings []string) {
+func Outputs(strings [2]string) {
 	for _, s := range strings {
 		fmt.Println(s)
 	}
