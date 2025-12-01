@@ -2,6 +2,7 @@ package main
 
 import (
 	"learning-go/control"
+	"learning-go/functions"
 	"learning-go/helpers"
 	"learning-go/types"
 	"learning-go/variables"
@@ -20,6 +21,10 @@ func main() {
 		{
 			ModuleName: "Control",
 			Function:   control.Main,
+		},
+		{
+			ModuleName: "Functions",
+			Function:   functions.Main,
 		},
 	})
 }

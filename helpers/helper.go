@@ -11,6 +11,7 @@ type ListOutput struct {
 
 func DisplayOutputs(outputList []ListOutput) {
 	for _, output := range outputList {
+		fmt.Println("")
 		fmt.Printf("🌳🌳🌳 %v 🌳🌳🌳 \n", output.ModuleName)
 		output.Function()
 	}

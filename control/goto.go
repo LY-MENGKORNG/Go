@@ -12,7 +12,7 @@ func GotoFunction() {
 	reader := bufio.NewReader(os.Stdin)
 	var input int
 
-Loop:
+Loop: //* NOTE: This is the entry point
 	fmt.Print("Enter your age: ")
 	inputString, err := reader.ReadString('\n')
 	if err != nil {
@@ -41,4 +41,5 @@ Loop:
 	}
 
 	fmt.Println("You're eligible! 👍")
+	fmt.Println("")
 }
